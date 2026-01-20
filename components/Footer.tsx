@@ -6,18 +6,12 @@ const Footer: React.FC = () => {
     <footer className="bg-white py-12 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-          <div className="flex items-center space-x-8 mb-8 md:mb-0">
-            <div className="flex flex-col">
-              <span className="font-black text-xl text-[#003366] tracking-tighter">
-                THALÈS <span className="font-light">INFORMATIQUE</span>
-              </span>
-            </div>
-            <div className="h-10 w-px bg-slate-200"></div>
-            <div className="flex flex-col">
-              <span className="font-bold text-xl text-slate-800 tracking-tighter">
-                Sage
-              </span>
-            </div>
+          <div className="flex items-center mb-8 md:mb-0">
+            <img 
+              src="https://i.ibb.co/7qJYP8w/1.png" 
+              alt="Thalès Informatique | Sage" 
+              className="h-12 w-auto object-contain"
+            />
           </div>
           
           <div className="flex space-x-6">
@@ -35,7 +29,7 @@ const Footer: React.FC = () => {
         
         <div className="pt-8 border-t border-slate-50 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm mb-4 md:mb-0">
-            &copy; 2025 Thalès Informatique. Tous droits réservés.
+            &copy; 2026 Thalès Informatique. Tous droits réservés.
           </p>
           <p className="text-slate-400 text-xs italic">
             Participation sur invitation uniquement. Événement professionnel B2B.

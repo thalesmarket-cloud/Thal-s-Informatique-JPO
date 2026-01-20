@@ -1,63 +1,138 @@
 
 import React from 'react';
-import Header from './components/Header.tsx';
-import Hero from './components/Hero.tsx';
-import Details from './components/Details.tsx';
-import Speakers from './components/Speakers.tsx';
-import Location from './components/Location.tsx';
 import RegistrationForm from './components/RegistrationForm.tsx';
-import Footer from './components/Footer.tsx';
 import Assistant from './components/Assistant.tsx';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow">
-        <Hero />
-        <Details />
-        <Speakers />
-        <Location />
-        <div id="register" className="py-20 bg-slate-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-              <div className="md:flex">
-                <div className="md:w-1/3 sage-gradient p-12 text-white flex flex-col justify-center">
-                  <h2 className="text-3xl font-bold mb-6">Réservez votre place</h2>
-                  <p className="text-blue-100 mb-8">
-                    L'événement est limité en capacité pour garantir la qualité des échanges. Merci de confirmer votre présence dès que possible.
-                  </p>
-                  <ul className="space-y-4">
-                    <li className="flex items-center space-x-3">
-                      <div className="bg-blue-400/30 p-2 rounded-full">
-                        <i className="fas fa-check text-sm"></i>
-                      </div>
-                      <span className="text-sm">Expertise Sage France</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="bg-blue-400/30 p-2 rounded-full">
-                        <i className="fas fa-check text-sm"></i>
-                      </div>
-                      <span className="text-sm">Networking VIP</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="bg-blue-400/30 p-2 rounded-full">
-                        <i className="fas fa-check text-sm"></i>
-                      </div>
-                      <span className="text-sm">Accès Démo Exclusive</span>
-                    </li>
-                  </ul>
+    <div className="min-h-screen flex flex-col items-center">
+      {/* Header avec fond sombre pour garantir la visibilité du logo */}
+      <header className="w-full bg-[#003366] py-6 px-4 mb-8 shadow-lg">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <div className="flex items-center">
+            <img 
+              src="https://i.ibb.co/7qJYP8w/1.png" 
+              alt="Thalès Informatique | Sage" 
+              className="h-10 md:h-14 w-auto object-contain"
+              onLoad={() => console.log('Logo loaded')}
+              onError={(e) => {
+                console.error('Logo failed to load');
+                (e.target as HTMLImageElement).style.display = 'none';
+              }}
+            />
+          </div>
+          <div className="hidden sm:block text-blue-200 text-sm font-medium italic border-l border-blue-400/30 pl-6">
+            Invitation Exclusive B2B
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-6xl w-full px-4 mb-20 animate-fade-in">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          
+          {/* Section gauche : Détails */}
+          <div className="space-y-10">
+            <div>
+              <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+                4 Février 2026
+              </span>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[#003366] leading-tight mb-6">
+                Le DAF acteur du pilotage de la performance
+              </h1>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Une matinée exclusive dédiée aux directions financières pour découvrir comment automatiser vos processus et sécuriser votre pilotage stratégique avec les solutions Sage.
+              </p>
+            </div>
+
+            {/* Cartes Info */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start space-x-4">
+                <div className="text-blue-600 bg-blue-50 p-3 rounded-lg">
+                  <i className="fas fa-calendar-day text-xl"></i>
                 </div>
-                <div className="md:w-2/3 p-8 md:p-12">
-                  <RegistrationForm />
+                <div>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-tighter">Horaires</p>
+                  <p className="font-bold text-slate-800">09:30 – 12:30</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start space-x-4">
+                <div className="text-blue-600 bg-blue-50 p-3 rounded-lg">
+                  <i className="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-tighter">Lieu</p>
+                  <p className="font-bold text-slate-800">Marina Casablanca</p>
+                  <p className="text-sm text-slate-500">Tour Crystal 1, Niv. 9</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Intervenants */}
+            <div>
+              <h3 className="text-xl font-bold text-[#003366] mb-6 flex items-center">
+                <i className="fas fa-microphone-alt mr-3 text-blue-500"></i>
+                Intervenants
+              </h3>
+              <div className="grid grid-cols-1 gap-3">
+                <div className="flex items-center space-x-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                  <div className="w-12 h-12 overflow-hidden rounded-full border-2 border-slate-100 shadow-inner">
+                    <img 
+                      src="https://i.ibb.co/MkgmG56k/1560775947214.jpg" 
+                      alt="Chupa FLOSY" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-slate-900 text-sm">Chupa FLOSY</p>
+                    <p className="text-xs text-slate-500">Expert Avant-Vente, Sage France</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                  <div className="w-12 h-12 overflow-hidden rounded-full border-2 border-slate-100 shadow-inner">
+                    <img 
+                      src="https://i.ibb.co/Wp3SXps8/Sans-titre.jpg" 
+                      alt="Yassine REDA" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-slate-900 text-sm">Yassine REDA</p>
+                    <p className="text-xs text-slate-500">Dir. Commercial, Thalès Informatique</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Section droite : Formulaire */}
+          <div id="reservation" className="bg-white p-8 md:p-10 rounded-[32px] shadow-2xl border border-slate-100 relative">
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-slate-900">Réserver ma place</h2>
+              <p className="text-slate-500 mt-1">Merci de confirmer votre présence.</p>
+            </div>
+            <RegistrationForm />
+          </div>
+
         </div>
       </main>
+
       <Assistant />
-      <Footer />
+
+      <footer className="w-full bg-slate-900 text-slate-400 py-12 px-4 mt-auto">
+        <div className="max-w-6xl mx-auto flex flex-col items-center">
+          <div className="mb-6 opacity-80 hover:opacity-100 transition-opacity">
+             <img 
+              src="https://i.ibb.co/7qJYP8w/1.png" 
+              alt="Thalès Informatique | Sage" 
+              className="h-10 w-auto object-contain"
+            />
+          </div>
+          <p className="text-sm mb-4 text-center">© 2026 Thalès Informatique & Sage Maroc.</p>
+          <p className="text-xs italic opacity-60 text-center">
+            Participation sur invitation uniquement. Nombre de places limité.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

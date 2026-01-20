@@ -7,13 +7,13 @@ const Speakers: React.FC = () => {
       name: "Chupa FLOSY",
       role: "Expert Avant-Vente",
       company: "Sage France",
-      imageUrl: "https://picsum.photos/seed/speaker1/400/400"
+      imageUrl: "https://i.ibb.co/MkgmG56k/1560775947214.jpg"
     },
     {
       name: "Yassine REDA",
       role: "Directeur Commercial",
       company: "Thalès Informatique",
-      imageUrl: "https://picsum.photos/seed/speaker2/400/400"
+      imageUrl: "https://i.ibb.co/Wp3SXps8/Sans-titre.jpg"
     }
   ];
 
@@ -32,7 +32,7 @@ const Speakers: React.FC = () => {
                 <img 
                   src={speaker.imageUrl} 
                   alt={speaker.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#003366]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex space-x-4">

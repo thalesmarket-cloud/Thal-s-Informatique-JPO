@@ -31,10 +31,10 @@ const Assistant: React.FC = () => {
         model: 'gemini-3-flash-preview',
         contents: `Tu es un assistant utile pour l'événement "Journée Découverte Sage Maroc" organisé par Thalès Informatique et Sage Maroc.
         Détails de l'événement:
-        - Date: 4 février 2025
+        - Date: 4 février 2026
         - Heure: 09:30 à 12:30
         - Lieu: Marina Casablanca, Tour Crystal 1, Niveau 9
-        - Thème: Optimisation de la performance financière avec Sage FRP 1000
+        - Thème: Le DAF acteur du pilotage de la performance
         - Intervenants: Chupa FLOSY (Sage France) et Yassine REDA (Thalès Informatique)
         - Audience: DAF, CFO, Responsables Financiers.
         Réponds de manière professionnelle, concise et encourage l'utilisateur à réserver sa place.

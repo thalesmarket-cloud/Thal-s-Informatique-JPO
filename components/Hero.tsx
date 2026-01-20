@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         <div className="max-w-3xl">
           <div className="inline-flex items-center space-x-2 bg-blue-500/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8 animate-fade-in">
             <i className="far fa-calendar-alt text-blue-300"></i>
-            <span className="text-sm font-bold uppercase tracking-wider">4 Février 2025 | 09:30 – 12:30</span>
+            <span className="text-sm font-bold uppercase tracking-wider">4 Février 2026 | 09:30 – 12:30</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
