@@ -177,17 +177,23 @@ const RegistrationForm: React.FC = () => {
         </div>
       )}
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full py-4 bg-gradient-to-r from-[#003366] to-[#005bb5] text-white rounded-xl font-bold text-lg shadow-xl shadow-blue-900/10 hover:shadow-blue-900/20 hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-70 disabled:cursor-not-allowed mt-2"
-      >
-        {isSubmitting ? (
-          <span className="flex items-center justify-center">
-            <i className="fas fa-spinner fa-spin mr-2"></i> Envoi...
-          </span>
-        ) : "Confirmer ma participation"}
-      </button>
+      <div className="pt-2">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full py-4 bg-gradient-to-r from-[#003366] to-[#005bb5] text-white rounded-xl font-bold text-lg shadow-xl shadow-blue-900/10 hover:shadow-blue-900/20 hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? (
+            <span className="flex items-center justify-center">
+              <i className="fas fa-spinner fa-spin mr-2"></i> Envoi...
+            </span>
+          ) : "Confirmer ma participation"}
+        </button>
+        <p className="text-center text-xs font-bold text-red-600 mt-4 flex items-center justify-center space-x-2 animate-pulse">
+          <i className="fas fa-exclamation-triangle"></i>
+          <span>Attention : il ne reste que 6 places disponibles pour cet événement.</span>
+        </p>
+      </div>
     </form>
   );
 };
