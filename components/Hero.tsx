@@ -18,15 +18,15 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <div className="inline-flex items-center space-x-2 bg-blue-500/30 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8 animate-fade-in shadow-xl">
             <i className="far fa-calendar-alt text-blue-300"></i>
             <span className="text-sm font-bold uppercase tracking-wider">4 Février 2026 | 09:30 – 12:30</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg">
-            Journée <br/>
-            <span className="text-blue-400">Porte Ouverte</span>
+            Journée Porte Ouverte <br/>
+            <span className="text-blue-400">Thalès Informatique</span>
           </h1>
           
           <div className="mb-10 bg-black/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 inline-block">
@@ -39,34 +39,34 @@ const Hero: React.FC = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          {/* Nouveau layout : Bouton et Icônes sur la même ligne */}
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 animate-fade-in">
             <a 
               href="#reservation" 
-              className="px-10 py-5 bg-white text-[#003366] rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-2xl hover:-translate-y-1 text-center"
+              className="px-10 py-5 bg-white text-[#003366] rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-2xl hover:-translate-y-1 text-center whitespace-nowrap min-w-[240px]"
             >
               Réserver ma place
             </a>
-            <a 
-              href="#about" 
-              className="px-10 py-5 bg-transparent border-2 border-white/30 text-white rounded-xl font-bold text-lg hover:bg-white/10 transition-all text-center backdrop-blur-sm"
-            >
-              En savoir plus
-            </a>
-          </div>
 
-          <div className="mt-16 flex flex-wrap items-center gap-12 opacity-90 border-t border-white/10 pt-8">
-            <div className="flex items-center space-x-3">
-              <i className="fas fa-map-marker-alt text-2xl text-blue-400"></i>
-              <div className="text-sm">
-                <p className="font-bold">Marina Casablanca</p>
-                <p className="text-blue-200">Tour Crystal 1, Niveau 9</p>
+            <div className="flex flex-wrap items-center gap-8 md:gap-10">
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 bg-blue-500/20 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-500/40 transition-all duration-300">
+                  <i className="fas fa-map-marker-alt text-2xl text-blue-300"></i>
+                </div>
+                <div className="text-sm">
+                  <p className="font-bold text-lg leading-tight">Marina Casablanca</p>
+                  <p className="text-blue-200 font-medium">Tour Crystal 1, Niveau 9</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <i className="fas fa-users text-2xl text-blue-400"></i>
-              <div className="text-sm">
-                <p className="font-bold">Capacité Limitée</p>
-                <p className="text-blue-200">Exclusivement B2B</p>
+              
+              <div className="flex items-center space-x-4 group">
+                <div className="w-12 h-12 bg-blue-500/20 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-500/40 transition-all duration-300">
+                  <i className="fas fa-users text-2xl text-blue-300"></i>
+                </div>
+                <div className="text-sm">
+                  <p className="font-bold text-lg leading-tight">Capacité Limitée</p>
+                  <p className="text-blue-200 font-medium">Exclusivement B2B</p>
+                </div>
               </div>
             </div>
           </div>

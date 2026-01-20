@@ -39,7 +39,7 @@ const Location: React.FC = () => {
             
             <div className="mt-12 pt-8 border-t border-white/10">
               <a 
-                href="https://maps.google.com" 
+                href="https://maps.app.goo.gl/HLBEctS55R6eraEA7" 
                 target="_blank" 
                 rel="noreferrer"
                 className="inline-flex items-center space-x-2 text-white font-bold hover:text-blue-300 transition-colors"
