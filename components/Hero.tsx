@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           {/* Badge Date - Très compact */}
           <div className="inline-flex items-center space-x-2 bg-[#1e3a5f]/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 mb-4 animate-fade-in shadow-lg">
             <i className="far fa-calendar-alt text-blue-400 text-[10px]"></i>
-            <span className="text-[9px] md:text-xs font-bold uppercase tracking-wider text-white">4 FÉVRIER 2026 | 09:30 – 12:00</span>
+            <span className="text-[9px] md:text-xs font-bold uppercase tracking-wider text-white">4 FÉVRIER 2026 | 09:00 – 12:00</span>
           </div>
           
           {/* Titre Principal - Taille optimisée */}
