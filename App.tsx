@@ -2,7 +2,6 @@
 import React from 'react';
 import Hero from './components/Hero.tsx';
 import Details from './components/Details.tsx';
-import Agenda from './components/Agenda.tsx';
 import Speakers from './components/Speakers.tsx';
 import Location from './components/Location.tsx';
 import RegistrationForm from './components/RegistrationForm.tsx';
@@ -37,10 +36,9 @@ const App: React.FC = () => {
         {/* Hero Section: Design exact du screenshot, optimisé en hauteur */}
         <Hero />
 
-        {/* Section Suivante: Plus de padding géant car le bouton est remonté */}
+        {/* Section Suivante */}
         <Details />
 
-        <Agenda />
         <Speakers />
         <Location />
 
